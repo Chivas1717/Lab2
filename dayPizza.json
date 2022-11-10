@@ -1,0 +1,75 @@
+{
+	"pizzaoftheday": {
+		"54 cheese": {
+			"day": "Monday",
+			"price": 154,
+			"ingredients":{
+				"sauce": 1,
+				"cheese": 2,
+				"bazilik": 1
+			}
+		},
+		"pepperoni": {
+			"day": "Tuesday",
+			"price": 100,
+			"ingredients":{
+				"pepperoni": 1,
+				"sauce": 1,
+				"cheese": 1,
+				"pepper": 1,
+				"tomato": 1
+			}
+		},
+		"margorita": {
+			"day": "Wednesday",
+			"price": 90,
+			"ingredients":{
+				"pepperoni": 1,
+				"sauce": 1,
+				"mozzarella": 1,
+				"tomato": 1
+			}
+		},
+		"hawaiian": {
+			"day": "Thursday",
+			"price": 115,
+			"ingredients":{
+				"ham": 1,
+				"sauce": 1,
+				"cheese": 1,
+				"pineapple": 1
+			}
+		},
+		"buffalo": {
+			"day": "Friday",
+			"price": 110,
+			"ingredients":{
+				"chicken": 1,
+				"sauce": 1,
+				"mozzarella": 1,
+				"onion": 1
+			}
+		},
+		"bbq_chicken": {
+			"day": "Saturday",
+			"price": 130,
+			"ingredients":{
+				"chicken": 1,
+				"sauce": 1,
+				"cheese": 1,
+				"pepper": 1,
+				"onion": 1
+			}
+		},
+		"veggie": {
+			"day": "Sunday",
+			"price": 120,
+			"ingredients":{
+				"sauce": 1,
+				"cheese": 1,
+				"pepper": 1,
+				"onion": 1
+			}
+		}
+	}
+}

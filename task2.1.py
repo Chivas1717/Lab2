@@ -127,14 +127,18 @@ class Event:
         days_difference = Event.days_between(json_object["date"])
         print(days_difference)
         temp = int(input("Are you a student? 0 - no, 1 - yes: "))
+        ticket_type = 'Student'
         if temp:
             self.ticket = Student()
         else:
             if days_difference > 60:
+                ticket_type = 'Advance'
                 self.ticket = Advance()
             elif days_difference < 10:
+                ticket_type = 'Late'
                 self.ticket = Late()
             else:
+                ticket_type = 'Regular'
                 self.ticket = Regular()
 
         id = str(self.ticket.get_id())
@@ -153,15 +157,20 @@ class Event:
             json_base = json.load(file)
         return json_base[str(ticket_id)]["price"]
 
+    def ticket_by_id(self, ticket_id):
+        with open("tickets.json", "r") as file:
+            json_base = json.load(file)
+        return json_base[str(ticket_id)]
+
     def __str__(self):
-        return f'Price: {self.price}, Number of tickets: {self.number}'
+        return f'Ticket type: Price: {self.price}, Number of tickets: {self.number}'
 
 
 x = Event(99, 10, "11.03.2023")
 x.buy_ticket()
 x.buy_ticket()
 x.buy_ticket()
+print(x.ticket_price_by_id(1))
 print(x.ticket_price_by_id(2))
 print(x.ticket_price_by_id(3))
-print(x)
-
+print(x.ticket_by_id(2))
